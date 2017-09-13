@@ -8,11 +8,13 @@
 	<version>1.0.0</version>
 
 	<install for="2.0 - 2.0.99">
+		<database>hooks.php</database>
 		<modification type="file">PastebinViewer.xml</modification>
 		<require-file name="PastebinViewer.php" destination="$sourcedir">Master file</require-file>
 	</install>
 
 	<uninstall for="2.0 - 2.0.99">
+		<database>hooks.php</database>
 		<modification type="file" reverse="true">PastebinViewer.xml</modification>
 		<remove-file name="$sourcedir/PastebinViewer.php" />
 	</uninstall>

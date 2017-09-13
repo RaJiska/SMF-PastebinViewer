@@ -5,12 +5,14 @@
 	<id>RaJiska:PastebinViewer</id>
 	<version>1.0.0</version>
 
-	<file name="$sourcedir/Post.php">
+	<file name="$themedir/Display.template.php">
 		<operation>
-			<search position="replace"></search>
-			<add>
-				<![CDATA[$_POST['message'] = PastebinViewer_Process($_POST['message']);]]>
-			</add>
+			<search position="replace"><![CDATA[// Show the post itself, finally!]]></search>
+			<add><![CDATA[
+		// Alter the message to replace pastebin tags with HTML.
+		$message['body'] = PastebinViewer_Process($message['body']);
+
+		// Show the post itself, finally!]]></add>
 		</operation>
   </file>
 </modification>
