@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>RaJiska:PastebinViewer</id>
+	<name>Pastebin Viewer</name>
+	<type>modification</type>
+	<version>1.0.0</version>
+
+	<install for="2.0 - 2.0.99">
+		<modification type="file">PastebinViewer.xml</modification>
+		<require-file name="PastebinViewer.php" destination="$sourcedir">Master file</require-file>
+	</install>
+
+	<uninstall for="2.0 - 2.0.99">
+		<modification type="file" reverse="true">PastebinViewer.xml</modification>
+		<remove-file name="$sourcedir/PastebinViewer.php" />
+	</uninstall>
+</package-info>

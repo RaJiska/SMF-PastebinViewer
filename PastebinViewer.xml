@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>RaJiska:PastebinViewer</id>
+	<version>1.0.0</version>
+
+	<file name="$sourcedir/Post.php">
+		<operation>
+			<search position="replace"></search>
+			<add>
+				<![CDATA[$_POST['message'] = PastebinViewer_Process($_POST['message']);]]>
+			</add>
+		</operation>
+  </file>
+</modification>
