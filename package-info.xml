@@ -5,7 +5,7 @@
 	<id>RaJiska:PastebinViewer</id>
 	<name>Pastebin Viewer</name>
 	<type>modification</type>
-	<version>1.0.0</version>
+	<version>0.7</version>
 
 	<install for="2.0 - 2.0.99">
 		<database>hooks.php</database>
