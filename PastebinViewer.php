@@ -10,7 +10,7 @@ function PastebinViewer_Process($post)
 	foreach ($results as $key => $result)
 	{
 		preg_match('/(http|https)\:\/\/pastebin.com\/(.*?)$/s', $results[1][$key], $pasteid);
-		$pasteid = (count($pasteid) >= 3) ? $pasteid[2] : '0';
+		$pasteid = (count($pasteid) >= 3) ? htmlspecialchars($pasteid[2]) : '0';
 		$replace = "<iframe src=\"https://pastebin.com/embed_iframe/$pasteid\" style=\"border:none;width:100%;height:400px\"></iframe>";
 		$post = str_replace($results[0][$key], $replace, $post);
 	}
